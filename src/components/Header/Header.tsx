@@ -1,12 +1,19 @@
+import Navbar from './Menu/Navbar';
 import Link from 'next/link';
-import React from 'react';
 
 function Header() {
   return (
     <header>
-      <button>Logo</button>
-      <button>Go Premium</button>
-      <button>Menu</button>
+      <nav className={`nav`}>
+        <Link href={'/'}>
+          <a>
+            <h3 className="logo">Gamer Guides</h3>
+          </a>
+        </Link>
+        <button>Search</button>
+        <button>Go Premium</button>
+        <Navbar />
+      </nav>
     </header>
   );
 }

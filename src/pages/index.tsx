@@ -1,12 +1,12 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+
 import { IGame } from '../../types';
-import imageLoader from '../../imageLoader';
-import Link from 'next/link';
+
 import Slider from '../components/Slider/Slider';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import Games from '../components/Games/Games';
 import styles from '../styles/Home.module.css';
 import { styled } from '../../stitches.config';
 
@@ -39,30 +39,7 @@ const Home: NextPage<Props> = ({ games }) => {
       </Head>
       <Header />
       <Slider />
-      <main>
-        <h1>Welcome to GamerGuides</h1>
-
-        {games.map((game) => {
-          return (
-            <div key={game.id}>
-              <Link href={`/games/${game.gameSlug}`}>
-                <a>
-                  <h3>{game.gameTitle}</h3>
-                </a>
-              </Link>
-
-              <Image
-                loader={imageLoader}
-                unoptimized
-                src={game.gameImage}
-                alt={game.gameTitle}
-                width="200"
-                height="300"
-              />
-            </div>
-          );
-        })}
-      </main>
+      <Games games={games} />
       <Footer />
     </div>
   );
