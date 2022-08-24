@@ -1,24 +1,7 @@
-import Link from 'next/link';
 import React, { useState } from 'react';
-import { NavItemData } from './NavItemData';
-
-interface Props {
-  text: string;
-  href: string;
-  icon: string;
-  active: boolean;
-}
-
-const NavItem = ({ text, href, icon, active }: Props) => {
-  return (
-    <Link href={href}>
-      <a className={`nav__item ${active ? 'active' : ''}`}>
-        <span>{icon}</span>
-        {text}
-      </a>
-    </Link>
-  );
-};
+import { MenuData } from '../Menu/MenuData';
+import MenuItem from '../Menu/Menu';
+import style from './Navbar.module.css';
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
@@ -28,14 +11,16 @@ function Navbar() {
     <>
       <div
         onClick={() => setNavActive(!navActive)}
-        className={`${navActive ? 'active' : ''} nav__menu-bar`}
+        className={`${navActive ? style['active'] : ''} ${
+          style['nav__menu-bar']
+        }`}
       >
         <span></span>
         <span></span>
         <span></span>
       </div>
       <ul className={`${navActive ? 'active' : ''} nav__menu-list`}>
-        {NavItemData.map((menu, idx) => (
+        {MenuData.map((menu, idx) => (
           <li
             onClick={() => {
               setActiveIdx(idx);
@@ -43,7 +28,7 @@ function Navbar() {
             }}
             key={menu.text}
           >
-            <NavItem active={activeIdx === idx} {...menu} />
+            <MenuItem active={activeIdx === idx} {...menu} />
           </li>
         ))}
       </ul>

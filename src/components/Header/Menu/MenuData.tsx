@@ -1,4 +1,4 @@
-export const NavItemData = [
+export const MenuData = [
   {
     text: 'Home',
     href: '/',
