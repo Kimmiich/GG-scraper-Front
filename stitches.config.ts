@@ -38,4 +38,18 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
     fontFamily: ' Roboto, sans-serif',
   },
+  header: {
+    position: 'sticky',
+    zIndex: 30,
+    top: 0,
+    backgroundColor: '#000000',
+  },
+  nav: {
+    display: 'flex',
+    height: 60,
+    padding: '0px 10px',
+    justifyContent: 'right',
+    gap: 10,
+    alignItems: 'center',
+  },
 });

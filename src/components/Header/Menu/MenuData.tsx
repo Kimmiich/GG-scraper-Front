@@ -1,57 +1,70 @@
+import {
+  Book,
+  Home,
+  Star,
+  MapPin,
+  Video,
+  LogIn,
+  Edit,
+  Database,
+  Users,
+  Smile,
+} from 'react-feather';
+
 export const MenuData = [
   {
     text: 'Home',
     href: '/',
-    icon: '',
+    icon: <Home />,
   },
   {
     text: 'Guides',
     href: '/guides',
-    icon: '',
+    icon: <Book />,
   },
   {
     text: 'Maps',
     href: '/maps',
-    icon: '',
+    icon: <MapPin />,
   },
   {
     text: 'Reviews',
     href: '/reviews',
-    icon: '',
+    icon: <Star />,
   },
   {
     text: 'Videos',
     href: '/videos',
-    icon: '',
+    icon: <Video />,
   },
   {
     text: 'Members',
     href: '/members',
-    icon: '',
+    icon: <Users />,
   },
   {
     text: 'Pokedex',
     href: '/pokedex',
-    icon: '',
+    icon: <Smile />,
   },
   {
     text: 'Elden Ring DB',
     href: '/elden-ring-db',
-    icon: '',
+    icon: <Database />,
   },
   {
     text: 'Sign up',
     href: '/sign-up',
-    icon: '',
+    icon: <Edit />,
   },
   {
     text: 'Go Premium',
     href: '/go-premium',
-    icon: '',
+    icon: <Star />,
   },
   {
     text: 'Login',
     href: '/login',
-    icon: '',
+    icon: <LogIn />,
   },
 ];

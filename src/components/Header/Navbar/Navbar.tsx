@@ -1,37 +1,32 @@
 import React, { useState } from 'react';
 import { MenuData } from '../Menu/MenuData';
-import MenuItem from '../Menu/Menu';
+import { MenuItem } from '../Menu/Menu';
 import style from './Navbar.module.css';
+import { MenuIcon } from '../../Icons/MenuIcon';
+import { Menu } from '../Menu/Menu';
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
-  const [activeIdx, setActiveIdx] = useState(-1);
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const toggleMenu = () => {
+    setNavActive(!navActive);
+  };
+
+  const followLink = (idx: any) => {
+    setActiveIdx(idx);
+    setNavActive(false);
+  };
 
   return (
     <>
-      <div
-        onClick={() => setNavActive(!navActive)}
-        className={`${navActive ? style['active'] : ''} ${
-          style['nav__menu-bar']
-        }`}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul className={`${navActive ? 'active' : ''} nav__menu-list`}>
-        {MenuData.map((menu, idx) => (
-          <li
-            onClick={() => {
-              setActiveIdx(idx);
-              setNavActive(false);
-            }}
-            key={menu.text}
-          >
-            <MenuItem active={activeIdx === idx} {...menu} />
-          </li>
-        ))}
-      </ul>
+      <MenuIcon active={navActive} setNavActive={toggleMenu} />
+      <Menu
+        active={navActive}
+        setNavActive={toggleMenu}
+        activeIdx={activeIdx}
+        setActiveIdx={followLink}
+      />
     </>
   );
 }
