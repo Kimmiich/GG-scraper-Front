@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 import imageLoader from '../../../imageLoader';
 import Link from 'next/link';
 import { IGame } from '../../../types';

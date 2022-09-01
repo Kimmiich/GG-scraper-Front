@@ -7,6 +7,7 @@ import Slider from '../components/Slider/Slider';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Games from '../components/Games/Games';
+
 import styles from '../styles/Home.module.css';
 import { styled } from '../../stitches.config';
 
@@ -39,6 +40,7 @@ const Home: NextPage<Props> = ({ games }) => {
       </Head>
       <Header />
       <Slider />
+
       <Games games={games} />
       <Footer />
     </div>

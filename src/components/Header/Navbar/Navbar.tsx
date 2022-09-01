@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { MenuData } from '../Menu/MenuData';
-import { MenuItem } from '../Menu/Menu';
-import style from './Navbar.module.css';
 import { MenuIcon } from '../../Icons/MenuIcon';
 import { Menu } from '../Menu/Menu';
 

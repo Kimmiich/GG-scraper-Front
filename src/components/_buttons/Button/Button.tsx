@@ -8,34 +8,46 @@ const StyledButton = styled('button', {
   border: 'none',
   minWidth: 24,
   minHeight: 24,
-  padding: '4px 5px',
   cursor: 'pointer',
+  color: 'white',
+
   '& span': {
     paddingLeft: 6,
+  },
+
+  '& a': {
+    color: '#ffffff',
+    fontWeight: 'bold',
+    textDecoration: 'none',
   },
 
   variants: {
     type: {
       solid: {
+        padding: '4px 5px',
         backgroundColor: '$almostBlack',
         '&:hover': {
           backgroundColor: '$prettyInPink',
         },
+        '& a': {
+          fontSize: '14px',
+        },
       },
       transparent: {
-        backgroundColor: 'rgba(0, 0, 0, .33)',
+        width: '100%',
+        backgroundColor: 'rgba(0,0,0,.33)',
+        fontWeight: 600,
+        padding: '0.5em 1em',
+        fontSize: '1rem',
         '&:hover': {
           backgroundColor: '#ffffff',
+          '& a': {
+            color: '#000000',
+          },
         },
       },
     },
   },
-});
-
-const StyledLink = styled('a', {
-  color: '#ffffff',
-  fontWeight: 'bold',
-  fontSize: '14px',
 });
 
 const Elements = (props: ButtonProps) => {
@@ -57,7 +69,7 @@ const Button = (props: ButtonProps) => {
   return (
     <StyledButton type={props.type}>
       <Link href={props.href}>
-        <StyledLink>{Elements(props)}</StyledLink>
+        <a>{Elements(props)}</a>
       </Link>
     </StyledButton>
   );
@@ -109,35 +121,4 @@ const StyledMenuIcon = styled('button', {
   },
 });
 
-export const MenuIcon = () => {
-  const [style, setStyle] = useState(false);
-
-  const handleClick = () => {
-    setStyle(!style);
-    console.log(style);
-  };
-  return (
-    <StyledMenuIcon active={style} onClick={handleClick}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </StyledMenuIcon>
-  );
-};
-
 export default Button;
-
-// '&.active': {
-//   backgroundColor: '$prettyInPink',
-//   '& span': {
-//     opacity: 1,
-//     transform: 'rotate(45deg) translate(-1px, -1px)',
-//   },
-//   '& span:nth-last-child(2)': {
-//     transform: 'rotate(45deg) translate(-1px, -1px)',
-//   },
-//   '& span:nth-last-child(3)': {
-//     opacity: 0,
-//     transform: 'rotate(0deg) scale(0.2, 0.2)',
-//   },
-// },
