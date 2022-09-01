@@ -6,10 +6,9 @@ export const { styled, getCssText } = createStitches({
     l: '(min-width: 1200px)',
   },
   theme: {
-    fonts: {
-      system: 'system-ui',
-    },
-    colors: {
+    color: {
+      basicLight: '#FFFFFF',
+      basicDark: '#000000',
       coolBlue: '#123673',
       prettyInPink: '#E75971',
       almostBlack: '#333333',
@@ -17,16 +16,17 @@ export const { styled, getCssText } = createStitches({
       moodyViolet: '#7D4772',
       darkerViolet: '#704572',
     },
-    fontSizes: {
-      s: '1rem',
-      m: '1.125rem',
+    fontSize: {
+      s: '1rem', // 16px
+      m: '1.125rem', // 18px
       l: '1.5rem',
     },
     space: {
-      5: '0.3125rem',
-      10: '0.625rem',
-      20: '1.25rem',
-      40: '2.5rem',
+      5: '0.3125rem', // 5px
+      10: '0.625rem', // 10px
+      15: '0.9375rem', // 15px
+      20: '1.25rem', // 20px
+      40: '2.5rem', // 40px
     },
   },
 });

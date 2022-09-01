@@ -6,11 +6,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Button from '../_buttons/Button/Button';
 
-import { styled } from '../../../stitches.config';
-
-const StyledContainer = styled('div', {
-  width: '100vw',
-});
+import { styled } from '../../ui/stitches.config';
+import { Text } from '../../ui/text';
 
 const Slider = () => {
   const arrowStyles: CSSProperties = {
@@ -41,6 +38,7 @@ const Slider = () => {
       autoPlay={true}
       showThumbs={false}
       infiniteLoop={true}
+      showStatus={false}
       statusFormatter={(current, total) =>
         `Current slide: ${current} / Total: ${total}`
       }
@@ -151,7 +149,7 @@ const Slider = () => {
                   );
                 })}
               </div>
-              <p>{slide.description}</p>
+              <Text bg="dark">{slide.description}</Text>
             </div>
           </div>
         );

@@ -1,5 +1,5 @@
 import { IMenuIcon } from './MenuIcon.types';
-import { styled } from '../../../stitches.config';
+import { styled } from '../../ui/stitches.config';
 
 const StyledMenuIcon = styled('button', {
   display: 'flex',

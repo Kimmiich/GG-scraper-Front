@@ -9,7 +9,7 @@ import Footer from '../components/Footer/Footer';
 import Games from '../components/Games/Games';
 
 import styles from '../styles/Home.module.css';
-import { styled } from '../../stitches.config';
+import { styled } from '../ui/stitches.config';
 
 interface Props {
   games: IGame[];

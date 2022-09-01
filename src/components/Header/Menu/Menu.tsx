@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { MenuProps, MenuItemProps } from './Menu.types';
 import { MenuData } from './MenuData';
-import { styled } from '../../../../stitches.config';
+import { styled } from '../../../ui/stitches.config';
 
 const StyledMenu = styled('ul', {
   listStyle: 'none',

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ButtonProps } from './Button.types';
-import { styled } from '../../../../stitches.config';
+import { styled } from '../../../ui/stitches.config';
 import React, { useState } from 'react';
 
 const StyledButton = styled('button', {
