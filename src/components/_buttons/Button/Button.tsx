@@ -47,6 +47,14 @@ const StyledButton = styled('button', {
         },
       },
     },
+    size: {
+      s: {
+        width: 'auto',
+      },
+      l: {
+        width: '100%',
+      },
+    },
   },
 });
 
